@@ -21,7 +21,7 @@ public class GITGroup {
             	}
         }
         
-        
+        //testi
         
         // Luodaan pelaajan hahmo aloitusenergialla 100
         HumanCharacter character = new HumanCharacter(playerName, 100);
@@ -35,7 +35,8 @@ public class GITGroup {
             System.out.println("2. Syö");
             System.out.println("3. Juokse");
             System.out.println("4. Hyppää");
-            System.out.println("5. Lopeta peli");
+            System.out.println("5. Tanssi");
+            System.out.println("6. Lopeta peli");
 
             int choice = scanner.nextInt();
 
@@ -54,6 +55,9 @@ public class GITGroup {
                     character.jump();
                     break;
                 case 5:
+                    character.dance();
+                    break;    
+                case 6:
                     System.out.println("Peli päättyi!");
                     scanner.close();
                     System.exit(0);
@@ -150,4 +154,12 @@ class HumanCharacter extends Character
         energy -= 8;
         System.out.println(name + " jumps");
     	}
+    
+    // Metodi tanssimiseen, tanssiminen vie energiaa 10
+    public void dance()
+    {
+    	energy -= 10;
+    	System.out.println(name + " dances");		
+    }
+    
 } // Alaluokka HumanCharacter päättyy tähän
