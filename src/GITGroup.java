@@ -2,13 +2,27 @@ import java.util.Scanner;
 
 public class GITGroup {
 
-    public static void main(String[] args) 
+    public static void main(String[] args)
     {
         // Kysytään pelaajan nimi
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Anna pelaajan nimi: ");
-        String playerName = scanner.nextLine();
+        String playerName = "";
 
+        // Tarkastetaan onko pelaajan nimi tyhja
+        while (playerName.isEmpty()) 
+        {
+            System.out.print("Anna pelaajan nimi: ");
+            playerName = scanner.nextLine().trim();
+
+            // Tarkistetaan, ettei nimi ole tyhjä
+            if (playerName.isEmpty()) 
+            	{
+                System.out.println("Nimi ei voi olla tyhjä. Anna nimi uudelleen.");
+            	}
+        }
+        
+        
+        
         // Luodaan pelaajan hahmo aloitusenergialla 100
         HumanCharacter character = new HumanCharacter(playerName, 100);
         character.characterInfo();
