@@ -38,7 +38,16 @@ public class GITGroup {
             System.out.println("5. Tanssi");
             System.out.println("6. Lopeta peli");
 
-            int choice = scanner.nextInt();
+            //Try/catch, jos käyttäjä valitsee esim.kirjaimen numeron sijaan
+            int choice=-1;
+            try {
+            	System.out.println("Valitse toiminto: ");
+            	choice = scanner.nextInt();
+            } catch (java.util.InputMismatchException e) {
+            	System.out.println("Valitse toiminto annetuista numeroista");
+            	scanner.nextLine();
+            	continue;
+            }
 
             switch (choice) 
             {
