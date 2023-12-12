@@ -38,7 +38,7 @@ public class GITGroup {
             System.out.println("5. Tanssi");
             System.out.println("6. Lopeta peli");
 
-            //Try/catch, jos käyttäjä valitsee esim.kirjaimen numeron sijaan
+            //Try/catch, jos käyttäjä valitsee esim.kirjaimen tai floatin annettujen numeroiden sijaan
             int choice=-1;
             try {
             	System.out.println("Valitse toiminto: ");
