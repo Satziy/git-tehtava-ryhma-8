@@ -82,7 +82,22 @@ public class GITGroup {
                 character.setEnergy(100);
                 System.out.println("Energiasi on täynnä.");
             	}
+          // Tarkistetaan välillä, kuinka paljon energiaa on ja kehotetaan hankkimaan lisää
+            if (character.getEnergy() <= 50) 
+            	{
+                System.out.println("Lisätäksesi energiaa syö tai nuku");
+                scanner.close();
+                System.exit(0);
+            	}
 
+             // Tarkistetaan välillä, kuinka paljon energiaa on ja kehotetaan hankkimaan lisää
+            if (character.getEnergy() <= 20) 
+            	{
+                System.out.println("Energia huolestuttavasti vähissä.");
+                scanner.close();
+                System.exit(0);
+            	}
+            
             // Peli loppuu kun energia on 0, tarkistetaan se tässä
             if (character.getEnergy() <= 0) 
             	{
